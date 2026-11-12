@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocialArtist · Publicar</title>
+  <link rel="stylesheet" href="/src/styles/estilos.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="contenido">
+    <section class="tarjeta ancha">
+      <h1>Comparte tu obra</h1>
+      <p class="sub">Tu publicación será revisada por el administrador antes de aparecer en la galería.</p>
+      <form id="form-publicar">
+        <img id="vista-previa" class="oculto" alt="Vista previa">
+        <label>Imagen (JPG, PNG, WEBP o GIF, máx. 5 MB)
+          <input type="file" name="imagen" accept="image/jpeg,image/png,image/webp,image/gif" required>
+        </label>
+        <label>Tipo de obra</label>
+        <div class="tipos">
+          <label class="tipo-op">
+            <input type="radio" name="tipoObra" value="DIGITAL" checked>
+            <span class="caja"><span class="ico">🖥️</span><b>Digital</b><small>Ilustración, arte 3D, fotografía digital…</small></span>
+          </label>
+          <label class="tipo-op">
+            <input type="radio" name="tipoObra" value="FISICA">
+            <span class="caja"><span class="ico">🖌️</span><b>Física</b><small>Óleo, acuarela, escultura, dibujo a mano…</small></span>
+          </label>
+        </div>
+        <label>Título
+          <input name="titulo" maxlength="100" placeholder="Nombre de tu obra" required>
+        </label>
+        <label>Descripción
+          <textarea name="descripcion" rows="4" maxlength="500" placeholder="Técnica, materiales, inspiración…"></textarea>
+        </label>
+        <p id="mensaje" class="mensaje" role="alert"></p>
+        <button type="submit">Enviar para revisión</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/src/js/api.js"></script>
+  <script src="/src/js/publicar.js"></script>
+</body>
+</html>

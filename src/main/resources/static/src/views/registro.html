@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocialArtist · Crear cuenta</title>
+  <link rel="stylesheet" href="/src/styles/estilos.css">
+</head>
+<body class="centrado">
+  <div class="manchas"><span class="mancha m1"></span><span class="mancha m2"></span><span class="mancha m3"></span></div>
+  <main class="tarjeta">
+    <p class="logo">Únete</p>
+    <p class="sub">Crea tu cuenta y comparte tu arte</p>
+    <form id="form-registro">
+      <label>Nombre
+        <input name="nombre" maxlength="50" required>
+      </label>
+      <label>Apellidos
+        <input name="apellidos" maxlength="80" required>
+      </label>
+      <label>Nombre de usuario
+        <input name="nombreUsuario" minlength="3" maxlength="30" pattern="[A-Za-z0-9_.]+"
+               title="Letras, números, punto y guion bajo" required autocomplete="username">
+      </label>
+      <label>Contraseña
+        <input type="password" name="contrasena" minlength="6" maxlength="100" required autocomplete="new-password">
+      </label>
+      <p id="mensaje" class="mensaje" role="alert"></p>
+      <button type="submit">Registrarme</button>
+      <a class="enlace" href="/index.html">Ya tengo una cuenta</a>
+    </form>
+  </main>
+  <script src="/src/js/api.js"></script>
+  <script src="/src/js/auth.js"></script>
+</body>
+</html>

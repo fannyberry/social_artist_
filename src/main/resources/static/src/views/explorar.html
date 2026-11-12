@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocialArtist · Explorar</title>
+  <link rel="stylesheet" href="/src/styles/estilos.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+
+  <main class="contenido">
+    <div class="encabezado">
+      <h1>Descubre <em>arte</em> sin límites</h1>
+      <p>Obras digitales y físicas de artistas de la comunidad</p>
+    </div>
+    <div class="filtros" id="filtros">
+      <button class="chip activo" data-tipo="">✨ Todas</button>
+      <button class="chip" data-tipo="DIGITAL">🖥️ Digitales</button>
+      <button class="chip" data-tipo="FISICA">🖌️ Físicas</button>
+    </div>
+    <div id="cuadricula" class="cuadricula"></div>
+  </main>
+
+  <!-- Detalle de la publicación -->
+  <div id="modal" class="modal oculto">
+    <div class="modal-caja">
+      <button id="cerrar" class="cerrar" aria-label="Cerrar">×</button>
+      <img id="m-img" alt="">
+      <div class="m-info">
+        <h2 id="m-titulo"></h2>
+        <p class="autor">
+          <span id="m-tipo" class="estado APROBADA"></span>
+          <span id="m-autor"></span> · <span id="m-fecha"></span>
+          <button id="m-seguir" class="btn-sec">Seguir</button>
+          <span id="m-seguidores"></span>
+        </p>
+        <p id="m-desc"></p>
+        <button id="m-eliminar" class="btn-peligro oculto">Eliminar publicación</button>
+        <div class="acciones">
+          <button id="m-like" class="btn-sec">♡ 0</button>
+          <button id="m-reportar" class="btn-sec">Reportar</button>
+        </div>
+        <div id="m-comentarios"></div>
+        <form id="m-form">
+          <input id="m-texto" maxlength="300" placeholder="Escribe un comentario..." required>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/src/js/api.js"></script>
+  <script src="/src/js/explorar.js"></script>
+</body>
+</html>

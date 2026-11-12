@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocialArtist · Iniciar sesión</title>
+  <link rel="stylesheet" href="/src/styles/estilos.css">
+</head>
+<body class="centrado">
+  <div class="manchas"><span class="mancha m1"></span><span class="mancha m2"></span><span class="mancha m3"></span></div>
+  <main class="tarjeta">
+    <p class="logo">SocialArtist</p>
+    <p class="sub">Donde el arte encuentra su galería</p>
+    <form id="form-login">
+      <label>Usuario
+        <input name="nombreUsuario" placeholder="tu_usuario" required autocomplete="username">
+      </label>
+      <label>Contraseña
+        <input type="password" name="contrasena" placeholder="••••••••" required autocomplete="current-password">
+      </label>
+      <a class="enlace" href="/src/views/registro.html">¿Aún no tienes cuenta? Crea una</a>
+      <p id="mensaje" class="mensaje" role="alert"></p>
+      <button type="submit">Entrar a la galería</button>
+    </form>
+  </main>
+  <script src="/src/js/api.js"></script>
+  <script src="/src/js/auth.js"></script>
+</body>
+</html>
